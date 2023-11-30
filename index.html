@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Code Quiz</title>
+    <link rel = "stylesheet" type = "text/css" href = "./assets/css/Normalize.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "./assets/css/style.css"/>
+    <title>WebDevQuiz</title>
 </head>
 <body>
-    <header>
-        <div>
-            <button class="btnHeader" id="view-high-scores">View High Scores</button>
-        </div>
-        <div>
-            <p>Time: <span id="timeLeft">xxx</span></p>
-        </div>
-         
+    <header> 
+        <nav>
+            <a id="high-scores">Saved Scores</a>
+        </nav>
+        <ul>
+            <li id="timer">Time left: <span></span></li>
+        </ul>
     </header>
-
-        <div id="mainDiv"> <!-- Container for grid items -->
-            <div id="gridContainer">
-                <p id="questionDisplay">Welcome to our code Quiz!</p>
-                <p id="finalScoreDisplay"></p>
-                <p id="enterInitials"></p>
-                <textarea id=enterInitialsTextArea></textarea>
-                <button class="btn" id="start-quiz">Start Quiz</button>
-                <button class="btn" id="answer1"></button>
-                <button class="btn" id="answer2"></button>
-                <button class="btn" id="answer3"></button>
-                <button class="btn" id="answer4"></button>
-                <button class="btn" id="submitScore"></button> <!-- Grid nows where to put next item.-->
-
-            </div>
-            <div id="answerCorrectWrongGrid"></div>
-            <p id=answerCorrectWrong></p>
-            </div>
-
+   
+    <section id="main">
+        <h1 id="title/question"></h1>
+        <p id="instructions"></p>
+        <ul id = "buttons">
+        </ul>
+        <p id = "eval-ans"></p>
     </section>
-    
-    <script src="script.js"></script>
+
+    <footer></footer>
+    <script src="./assets/javascript/script.js" rel="text/script" ></script>
 </body>
 </html>
