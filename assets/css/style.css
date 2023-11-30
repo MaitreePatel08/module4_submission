@@ -1,0 +1,141 @@
+/*Sets all boxes rendered by the browser to be border-boxes*/
+
+*{
+    box-sizing: border-box; 
+}
+
+/*Sets properties that serve as point of reference for other elements whithin the page. Includes CSS variableslsl*/
+
+:root{
+    font-size:10px;
+    line-height: 4rem;
+    --inst-color:blanchedalmond;
+    --bg-color:rgb(84, 89, 34);
+    --eval-color: white;
+    --shadow-color:black;
+    --input-field-color: azure;
+    --color-stop1: blue;
+    --color-stop2: darkgray;
+    --margin: 20px;
+    --btn-field-height: 50px;
+}
+
+/*Sets properties for the whole body of the document*/
+
+body{
+    display: flex;
+    flex-direction:column;
+    color:var(--inst-color);
+    width:100%;
+    min-height:100vh;
+    background-color: var(--bg-color);
+}
+
+/* Stylization for the Header*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size:2rem;
+}
+header nav {
+    margin: var(--margin);
+}
+header nav a:hover{
+    text-decoration: underline;
+}
+header ul li{
+    margin:-2.5px var(--margin) var(--margin) var(--margin);
+}
+header ul li span {
+font: bolder 2rem monospaceS;
+}
+
+/*Stylizations for the main section and its descendants*/
+
+section{
+    margin: auto;
+    height:80vh;
+    text-align: center;
+    width:60%;
+}
+section h1{
+    font-size:4rem;
+}
+section p{
+    font-size: 3rem;
+}
+
+section ul {
+    list-style: none;
+}
+
+#eval-ans{
+    margin-top: 10px;
+    background-color: var(--eval-color);
+    width: 100%;
+}
+
+/*Stilization common to all buttons*/
+
+button{
+    background: linear-gradient(var(--color-stop1) 0%, var(--color-stop2) 100%);
+    min-height: var(--btn-field-height);
+    border-radius: var(--btn-field-height);
+    outline: ridge 5px var(--inst-color);
+    border-width: 2.5px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/*Stylization for the answer buttons*/
+
+section ul button{
+    width: 100%;
+    margin-bottom:var(--margin);
+}
+
+section ul button:hover{
+    box-shadow: 0 0 5px 10px var(--shadow-color);
+}
+
+/*Stylization for the form used to gather the initials of the user*/
+
+form {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+form input {
+
+    height:50px;
+    width:75%;
+    font-size:3rem;
+    background-color: var(--input-field-color);
+}
+
+form button {
+
+    width: 50%;
+    margin-top:var(--margin);
+    
+}
+
+/*Stylization for the last 2 buttons of the App*/
+
+#goBack, #clear{
+    width: 25%;
+    margin: var(--margin);
+}
+
+@media screen and (max-width:650) {
+    button{
+
+        font-size: 2rem;
+        
+    }
+
+}
